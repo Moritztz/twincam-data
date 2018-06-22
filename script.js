@@ -4,6 +4,7 @@ $(function() {
 // Showing off some of the configs available with SkyWay:).
 var peer = null;
 var connectedPeers = null;
+var tmpData = null;
 
 $('#data1').on('click', () => {
     getpeerid("data1");
@@ -199,8 +200,8 @@ function connect(c) {
         $('#connections').append(chatbox);
 
         c.on('data', data => {
-            unityDataRecieve(data);
-
+            //unityDataRecieve(data);
+            tmpData = data;
 
             //ó‚¯æ‚é‚Æ‚±‚ëI
 
@@ -236,14 +237,13 @@ function connect(c) {
     connectedPeers[c.remoteId] = 1;
 }
 
-function unityDataRecieve(data) {
+function unityDataRecieve() {
     //String;
     //var recieveData = resultR;
     //return recieveData;
     //return recieveData;
-    let returnData = data;
-    $("#resultRecieve").text(data);
-    return returnData;
+    $("#resultRecieve").text(tmpData);
+    return tmpData;
 }
 
 // Goes through each active peer and calls FN on its connections.
