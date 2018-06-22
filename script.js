@@ -135,7 +135,7 @@ $('#send').on('submit', e => {
 });
 
 function unityDataSend(unityData) {
-
+    alert(unityData);
     //e.preventDefault();//â‘Î“ü‚ê‚é‚ÈII
     // For each active connection, send the message.
 
