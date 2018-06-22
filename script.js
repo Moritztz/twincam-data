@@ -241,7 +241,9 @@ function unityDataRecieve(data) {
     //var recieveData = resultR;
     //return recieveData;
     //return recieveData;
+    let returnData = data;
     $("#resultRecieve").text(data);
+    return returnData;
 }
 
 // Goes through each active peer and calls FN on its connections.
