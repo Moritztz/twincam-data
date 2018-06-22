@@ -203,6 +203,8 @@ function connect(c) {
             //unityDataRecieve(data);
             tmpData = data;
 
+            $("#resultRecieve").text(data);
+
             //ó‚¯æ‚é‚Æ‚±‚ëI
 
 
