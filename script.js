@@ -6,22 +6,22 @@ var peer = null;
 var connectedPeers = null;
 var tmpData = null;
 
-$('#data1').on('click', () => {
+$('#data1').click(function () {
     getpeerid("data1");
     $('#callto-id').val("data2");
 });
 
-$('#data2').on('click', () => {
+$('#data2').click(function () {
     getpeerid("data2");
     $('#callto-id').val("data1");
 });
 
-$('#data3').on('click', () => {
+$('#data3').click(function () {
     getpeerid("data3");
     $('#callto-id').val("data4");
 });
 
-$('#data4').on('click', () => {
+$('#data4').click(function () {
     getpeerid("data4");
     $('#callto-id').val("data3");
 });
