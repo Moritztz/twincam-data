@@ -130,7 +130,7 @@ $('#send').on('submit', e => {
             $("#resultSend").text(msg);
         }
     });
-    $('#text').val('');
+    //$('#text').val('');
     $('#text').focus();
 });
 
