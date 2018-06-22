@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-$(function() {
+//$(function() {
 // Connect to SkyWay, have server assign an ID instead of providing one
 // Showing off some of the configs available with SkyWay:).
 var peer = null;
@@ -135,7 +135,6 @@ $('#send').on('submit', e => {
 });
 
 function unityDataSend(unityData) {
-    alert(unityData);
     //e.preventDefault();//â‘Î“ü‚ê‚é‚ÈII
     // For each active connection, send the message.
 
@@ -192,9 +191,9 @@ function connect(c) {
         chatbox.append(header);
         chatbox.append(messages);
         // Select connection handler.
-        chatbox.on('click', () => {
-            chatbox.toggleClass('active');
-        });
+        //chatbox.on('click', () => {
+        //    chatbox.toggleClass('active');
+        //});
 
         $('.filler').hide();
         $('#connections').append(chatbox);
@@ -266,5 +265,5 @@ function eachActiveConnection(fn) {
 }
 
 
-});
+//});
 
