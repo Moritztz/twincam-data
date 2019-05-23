@@ -1,31 +1,46 @@
-<html>
+﻿<!DOCTYPE HTML>
+<html lang="ja">
 <head>
-  <title>PeerJS - Video chat example</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--jQery�̃��C�u����-->
-  <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>                  <!--skyway��SDK-->
-  <script src="script_7.js"></script>
-  <script src="unity_7.js"></script>
+    <title>SkyWay data connection</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<link href="style.css" rel="stylesheet" type="text/css">-->
 </head>
 
 <body>
-
-  <div id="actions">
-    Your PeerJS ID is <span id="my-id" style="background-color:#ffffff"></span><br>
-    Connect to a peer: <input type="text" id="callto-id" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
-
-    <form id="send">
-      <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
+    <p>Your ID: <strong><span id="my-id">...</span></strong></p>
+    <div id="peerid-ui">
+        <p>select your id</p>
+        <button type="button" id="twincam">Twincam</button>
+        <button type="button" id="user">User</button>
+        <button type="button" id="sender">Sender</button>
+        <button type="button" id="reciever">Reciever</button>
+    </div>
+    <form id="connect">
+        Connect to a peer: <input type="text" placeholder="Someone else's id" id="their-id">
+        <button type="submit">Connect</button>
     </form>
-    <button id="close">Close selected connections</button>
-  </div>
-
-  <div id = "resultDiv" style="background-color:#ffffff"></div>
-  <div id = "resultRcv" style="background-color:#ffffff"></div>
-
-  <div id="wrap" style="background-color:#ffffff"><div id="connections"><span class="filler">You have not yet
-        made any connections.</span></div>
-    <div class="clear"></div></div>
-
+    <div id="connected-ui">
+        <p>Chat with <strong><span id="connected-id">...</span></strong></p>
+        <button type="button" id="close">Close</button>
+    </div>
+    <form id="send">
+        <input type="text" placeholder="Enter message" id="message">
+        <button type="submit">Send</button>
+    </form>
+    <div>
+        <p>S e n d: <span id="resultSend">...</span></p>
+        <p>Recieve: <span id="resultRecieve">...</span></p>
+        <br />
+        <p id="console"></p>
+    </div>
+    <br />
+    <div>
+        <button type="button" id="reload">Reload</button>
+    </div>
 </body>
+
+<!--jQueryを使っているので <body> → jQueryを使って記述したscript の順にすること-->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </html>
